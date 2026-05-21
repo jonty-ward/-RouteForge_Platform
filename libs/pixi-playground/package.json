@@ -1,0 +1,24 @@
+{
+  "name": "@routeforge/pixi-playground",
+  "version": "0.0.0",
+  "private": true,
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "peerDependencies": {
+    "pixi.js": ">=8.0.0",
+    "react": ">=18.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^6.0.0",
+    "typescript": "^5.0.0",
+    "react": "^18.2.0",
+    "@types/react": "^18.2.21",
+    "@types/node": "^20.0.0"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --out-dir dist",
+    "watch": "tsup src/index.ts --format cjs,esm --dts --out-dir dist --watch"
+  }
+}
